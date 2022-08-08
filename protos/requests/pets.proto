@@ -1,0 +1,8 @@
+syntax = "proto3";
+package pets;
+
+import "entities/pets.proto";
+
+message CreatePetRequest{
+    Pet pet = 1;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+package pets;
+
+message Pet{
+    string name = 1;
+    int32 age = 2;
+    Owner ownerInformation = 3;
+    Gender gender = 4;
+}
+
+message Owner{
+    string name = 1;
+    string lastName = 2;
+    int32 ID = 3;
+    Contact contactInformation = 4;
+}
+
+message Contact{
+    int32 telephoneNumber = 1;
+    string email = 2;
+}
+
+enum Gender{
+    MALE = 1;
+    FEMALE = 2;
+}
