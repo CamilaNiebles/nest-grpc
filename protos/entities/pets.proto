@@ -4,7 +4,7 @@ package pets;
 message Pet{
     string name = 1;
     int32 age = 2;
-    Owner ownerInformation = 3;
+    optional Owner ownerInformation = 3;
     Gender gender = 4;
 }
 
