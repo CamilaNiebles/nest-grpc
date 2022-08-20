@@ -5,5 +5,5 @@ import "responses/pets.proto";
 import "requests/pets.proto";
 
 service PetsService {
-    rpc get(CreatePetRequest) returns (CreatePetResponse) {};
+    rpc create(CreatePetRequest) returns (CreatePetResponse) {};
 }

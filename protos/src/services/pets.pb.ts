@@ -9,11 +9,11 @@ export const protobufPackage = "pets";
 export const PETS_PACKAGE_NAME = "pets";
 
 export interface PetsServiceClient {
-  get(request: CreatePetRequest): Observable<CreatePetResponse>;
+  create(request: CreatePetRequest): Observable<CreatePetResponse>;
 }
 
 export interface PetsServiceController {
-  get(
+  create(
     request: CreatePetRequest
   ):
     | Promise<CreatePetResponse>
@@ -23,7 +23,7 @@ export interface PetsServiceController {
 
 export function PetsServiceControllerMethods() {
   return function (constructor: Function) {
-    const grpcMethods: string[] = ["get"];
+    const grpcMethods: string[] = ["create"];
     for (const method of grpcMethods) {
       const descriptor: any = Reflect.getOwnPropertyDescriptor(
         constructor.prototype,
